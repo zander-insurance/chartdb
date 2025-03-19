@@ -8,8 +8,6 @@ import type { Diagram } from '@/lib/domain/diagram';
 import { useEffect, useRef, useState } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
 // ZANDER CHANGES - START
-// import zanderApiDbJson from './zanderApiDb.json';
-// import zanderWebDnbJson from './zanderWebDb.json';
 import axios from 'axios';
 import { loadFromDatabaseMetadata } from '@/lib/domain/diagram';
 import type { DatabaseMetadata } from '@/lib/data/import-metadata/metadata-types/database-metadata';
