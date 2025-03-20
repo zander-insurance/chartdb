@@ -17,6 +17,17 @@ export interface TopNavbarProps {}
 export const TopNavbar: React.FC<TopNavbarProps> = () => {
     // ZANDER_CHANGES - START
     const navigate = useNavigate();
+
+    const topNavBarItems = [
+        {
+            name: 'ZanderApiDb',
+            db: 'zanderApiDb',
+        },
+        {
+            name: 'ZanderWebDb',
+            db: 'zanderWebDb',
+        },
+    ];
     // const { effectiveTheme } = useTheme();
     // const { isMd: isDesktop } = useBreakpoint('md');
 
@@ -67,28 +78,18 @@ export const TopNavbar: React.FC<TopNavbarProps> = () => {
                 <>
             */}
             {/* ZANDER_CHANGES - START */}
+
             <div className="flex flex-1 gap-10">
-                <button
-                    onClick={() => {
-                        navigate(`/diagrams/zanderApiDb`);
-                    }}
-                >
-                    ZanderApiDb
-                </button>
-                <button
-                    onClick={() => {
-                        navigate(`/diagrams/zanderWebDb`);
-                    }}
-                >
-                    ZanderWebDb
-                </button>
-                {/* <button
-                    onClick={() => {
-                        navigate(`/diagrams/agentFrontDb`);
-                    }}
-                >
-                    AgentFrontDb
-                </button> */}
+                {topNavBarItems.map((item) => (
+                    <button
+                        key={item.name}
+                        onClick={() => {
+                            navigate(`/diagrams/${item.db}`);
+                        }}
+                    >
+                        {item.name}
+                    </button>
+                ))}
             </div>
             {/*
                     <DiagramName />
