@@ -27,6 +27,10 @@ export const TopNavbar: React.FC<TopNavbarProps> = () => {
             name: 'ZanderWebDb',
             db: 'zanderWebDb',
         },
+        {
+            name: 'AgentFrontDb',
+            db: 'agentfrontdb',
+        },
     ];
     // const { effectiveTheme } = useTheme();
     // const { isMd: isDesktop } = useBreakpoint('md');
